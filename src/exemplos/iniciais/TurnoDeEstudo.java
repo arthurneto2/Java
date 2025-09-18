@@ -1,6 +1,5 @@
 package exemplos.iniciais;
 
-import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class TurnoDeEstudo {

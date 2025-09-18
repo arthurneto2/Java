@@ -6,8 +6,6 @@ public class BoletimEscolar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double media = 7;
-
         System.out.println("Digite a primeira nota do aluno: ");
         double nota1 = scanner.nextInt();
 
