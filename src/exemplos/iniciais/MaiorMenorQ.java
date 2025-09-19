@@ -1,3 +1,5 @@
+package exemplos.iniciais;
+
 import java.util.Scanner;
 
 public class MaiorMenorQ {
