@@ -8,22 +8,22 @@ public class NumeroPrimo {
 
         System.out.println("Digite um valor para gerear uma sequencia de numeros primos:");
         int numero = scanner.nextInt();
-        int quantDivisores;
         int divisoesFeitas = 0;
+        boolean primo;
 
         for (int i = 1; i <= numero; i++) {
-            quantDivisores = 0;
-            for (int j = 1; j <= i; j++) {
+            primo = true;
+            for (int j = 2; j < i; j++) {
                 divisoesFeitas++;
                 if (i % j == 0) {
-                    quantDivisores++;
+                    primo = false;
+                    break;
                 }
             }
-            if (quantDivisores <= 2){
+            if (primo){
                 System.out.printf("%d ",i);
             }
         }
         System.out.println("\nDivisoes feitas: " + divisoesFeitas);
-
     }
 }
