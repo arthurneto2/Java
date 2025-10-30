@@ -39,6 +39,5 @@ public class CaixaLanchonete {
             }
         }while (true);
         System.out.println("Valor total: " + valorTotal);
-
     }
 }
