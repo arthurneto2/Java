@@ -1,4 +1,4 @@
-package exemplos.matriz;
+package exemplos.vetores;
 
 public class VetorMultiplicaIndice {
     public static void main(String[] args) {
