@@ -34,9 +34,7 @@ public class JogoDaVelha {
             }while (y < 0 || y > 3);
 
             if (!tabuleiro[x][y].equals("_")) {
-                if (i % 2 == 0) {
-                    System.out.println("Posição já preenchida, vez do jogador " + (i + 1) + " novamente");
-                }
+                System.out.println("Posição já preenchida, vez do jogador " + (i % 2 == 0 ? "1" : "2") + " novamente");
                 i--;
             } else {
                 if (i % 2 == 0) {

@@ -1,12 +1,15 @@
 package exemplos.matriz;
 
+import java.util.Random;
+
 public class MaiorValor {
     public static void main(String[] args) {
         int[][] matriz = new int[4][4];
+        Random numeroAleatorio = new Random();
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = (int) (Math.random() * 10);
+                matriz[i][j] = numeroAleatorio.nextInt(100);
             }
         }
 

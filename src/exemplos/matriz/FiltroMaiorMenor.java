@@ -19,8 +19,8 @@ public class FiltroMaiorMenor {
 
         int maiorLinha5 = matriz[5][0];
         int menorLinha5 = matriz[5][9];
-        int maiorLinha7 = matriz[7][0];
-        int menorLinha7 = matriz[7][9];
+        int maiorColuna7 = matriz[0][7];
+        int menorColuna7 = matriz[9][7];
 
         for (int i = 0; i < matriz[5].length; i++) {
             if (matriz[5][i] > maiorLinha5) {
@@ -31,18 +31,18 @@ public class FiltroMaiorMenor {
             }
         }
 
-        for (int i = 0; i < matriz[7].length; i++) {
-            if (matriz[7][i] > maiorLinha7) {
-                maiorLinha7 = matriz[7][i];
+        for (int i = 0; i < matriz.length; i++) {
+            if (matriz[i][7] > maiorColuna7) {
+                maiorColuna7 = matriz[i][7];
             }
-            if (matriz[7][i] < menorLinha7) {
-                menorLinha7 = matriz[7][i];
+            if (matriz[7][i] < menorColuna7) {
+                menorColuna7 = matriz[i][7];
             }
         }
 
         System.out.println("Maior valor da linha 5: " + maiorLinha5);
         System.out.println("Menor valor da linha 5: " + menorLinha5);
-        System.out.println("Maior valor da linha 7: " + maiorLinha7);
-        System.out.println("Menor valor da linha 7: " + menorLinha7);
+        System.out.println("Maior valor da coluna 7: " + maiorColuna7);
+        System.out.println("Menor valor da coluna 7: " + menorColuna7);
     }
 }

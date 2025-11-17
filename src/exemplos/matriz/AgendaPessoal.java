@@ -33,7 +33,7 @@ public class AgendaPessoal {
         return scanner.nextInt();
     }
 
-    public static int[] capituraMesDiaHora(Scanner scanner){
+    public static int[] capituraData(Scanner scanner){
         int[] data = new int[3];
 
         System.out.println("Digite o mes: ");
@@ -60,7 +60,7 @@ public class AgendaPessoal {
         System.out.println("Digite o evento: ");
         String evento = scanner.next();
 
-        int[] data = capituraMesDiaHora(scanner);
+        int[] data = capituraData(scanner);
         if (data == null){
             return;
         }
@@ -74,7 +74,7 @@ public class AgendaPessoal {
         System.out.println("### BUSCAR ###");
 
 
-        int[] data = capituraMesDiaHora(scanner);
+        int[] data = capituraData(scanner);
         if (data == null){
             return;
         }
