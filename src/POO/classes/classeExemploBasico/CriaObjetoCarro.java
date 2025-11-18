@@ -1,4 +1,4 @@
-package POO.Classes.ClasseExemploBasico;
+package POO.classes.classeExemploBasico;
 
 public class CriaObjetoCarro {
     public static void main(String[] args) {
@@ -23,5 +23,6 @@ public class CriaObjetoCarro {
 
         carro.setCapacidadeCombustivel(1000);
         System.out.println(carro.getCapacidadeCombustivel());
+        carro.exibirAutonomia();
     }
 }

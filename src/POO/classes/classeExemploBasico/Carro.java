@@ -1,4 +1,4 @@
-package POO.Classes.ClasseExemploBasico;
+package POO.classes.classeExemploBasico;
 
 public class Carro {
     //Atributos
@@ -24,6 +24,10 @@ public class Carro {
     @Override
     public String toString() {
         return "Carro{" + "marca=" + marca + ", modelo=" + modelo + ", numeroPassageiros=" + numeroPassageiros + ", capacidadeCombustivel=" + capacidadeCombustivel + ", consumoCombustivel=" + consumoCombustivel + '}';
+    }
+
+    public void exibirAutonomia(){
+        System.out.println("A autonomia do carro é: " + (capacidadeCombustivel * consumoCombustivel) + " km");
     }
 
     public void setMarca(String marca) {
