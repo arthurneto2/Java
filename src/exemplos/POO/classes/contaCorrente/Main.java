@@ -10,5 +10,8 @@ public class Main {
 
         conta.sacar(100);
         System.out.println(conta);
+
+        System.out.println("Saldo: " + conta.getSaldo());
+        System.out.println("Usando cheque especial?: " + conta.getContaEspecial());
     }
 }

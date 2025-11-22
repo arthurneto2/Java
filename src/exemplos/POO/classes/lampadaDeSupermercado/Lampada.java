@@ -6,6 +6,7 @@ public class Lampada {
     String cor;
     double potencia;
     double valor;
+    boolean ligada;
 
     public Lampada(int codigoDeBarras, String marca, String cor, double potencia, double valor) {
         this.codigoDeBarras = codigoDeBarras;
@@ -13,6 +14,15 @@ public class Lampada {
         this.cor = cor;
         this.potencia = potencia;
         this.valor = valor;
+        this.ligada = false;
+    }
+
+    void ligar(){
+        this.ligada = true;
+    }
+
+    void desligar(){
+        this.ligada = false;
     }
 
     @Override
