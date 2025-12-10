@@ -20,6 +20,10 @@ public class JogoDaVelha {
         }
     }
 
+    boolean posicaoValida(int linha, int coluna) {
+        return tabuleiro[linha][coluna].equals("_");
+    }
+
     public void jogadaJogador1(int linha, int coluna) {
         tabuleiro[linha][coluna] = "X";
     }

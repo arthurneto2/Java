@@ -28,7 +28,7 @@ public class Main {
                 y = scanner.nextInt();
             }while (y < 0 || y > 3);
 
-            if (!jogo.tabuleiro[x][y].equals("_")) {
+            if (!jogo.posicaoValida(x, y)) {
                 System.out.println("Posição já preenchida, vez do jogador " + (i % 2 == 0 ? "1" : "2") + " novamente");
                 i--;
             } else {
