@@ -2,11 +2,11 @@ package POO.classes.classeExemploBasico;
 
 public class Carro {
     //Atributos
-    String marca;
-    String modelo;
-    int numeroPassageiros;
-    double capacidadeCombustivel;
-    double consumoCombustivel;
+    private String marca;
+    private String modelo;
+    private int numeroPassageiros;
+    private double capacidadeCombustivel;
+    private double consumoCombustivel;
 
     //Metodos
         //Construtor composto
@@ -20,14 +20,19 @@ public class Carro {
         //Construtor simples
     public Carro(){}
 
+        //Cnstrutor com dois parametros
+    public Carro(String marca, String modelo) {
+        this(marca, modelo, 4, 50, 10);
+    }
+
+    public double calculaAutonomia(){
+        return (capacidadeCombustivel * consumoCombustivel);
+    }
+
         //Geters, Seters(lê e escreve os atributos) e ToString(mostra os valores dos atributos)
     @Override
     public String toString() {
         return "Carro{" + "marca=" + marca + ", modelo=" + modelo + ", numeroPassageiros=" + numeroPassageiros + ", capacidadeCombustivel=" + capacidadeCombustivel + ", consumoCombustivel=" + consumoCombustivel + '}';
-    }
-
-    public void exibirAutonomia(){
-        System.out.println("A autonomia do carro é: " + (capacidadeCombustivel * consumoCombustivel) + " km");
     }
 
     public void setMarca(String marca) {

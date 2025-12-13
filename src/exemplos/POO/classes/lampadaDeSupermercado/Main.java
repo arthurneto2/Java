@@ -6,9 +6,9 @@ public class Main {
         System.out.println(lampada);
 
         lampada.ligar();
-        System.out.println("Lampada ligada: " + lampada.ligada);
+        System.out.println("Lampada ligada: " + lampada.isLigada());
 
         lampada.desligar();
-        System.out.println("Lampada desligada: " + lampada.ligada);
+        System.out.println("Lampada desligada: " + lampada.isLigada());
     }
 }

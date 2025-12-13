@@ -3,9 +3,10 @@ package exemplos.POO.classes.JogoDaVelha;
 import java.util.Arrays;
 
 public class JogoDaVelha {
-    String[][] tabuleiro = new String[3][3];
+    private final String[][] tabuleiro;
 
     public JogoDaVelha() {
+        this.tabuleiro = new String[3][3];
         for (String[] strings : tabuleiro) {
             Arrays.fill(strings, "_");
         }

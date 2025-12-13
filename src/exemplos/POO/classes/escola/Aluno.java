@@ -1,19 +1,28 @@
 package exemplos.POO.classes.escola;
 
 public class Aluno {
-    String nome;
-    String matricula;
-    String curso;
-    String[] disciplinas;
-    double[] notas;
+    private String nome;
+    private String matricula;
+    private String curso;
+    private String[] disciplinas;
+    private double[][] notas;
 
     public Aluno(){
         disciplinas = new String[3];
-        notas = new double[3];
+        notas = new double[3][3];
     }
 
-    public boolean aprovado (double nota){
-        return nota >= 7;
+    public double calculaMedia(int disciplinaIndex) {
+        double soma = 0;
+        for (int i = 0; i < notas[disciplinaIndex].length; i++) {
+            soma += notas[disciplinaIndex][i];
+        }
+        return soma / notas[disciplinaIndex].length;
+    }
+
+    public boolean verificaAprovacao (int disciplinaIndex, int notaMinima) {
+        double media = calculaMedia(disciplinaIndex);
+        return media >= notaMinima;
     }
 
     public void setNome(String nome) {
@@ -32,7 +41,7 @@ public class Aluno {
         this.disciplinas = disciplinas;
     }
 
-    public void setNotas(double[] notas) {
+    public void setNotas(double[][] notas) {
         this.notas = notas;
     }
 
@@ -52,7 +61,7 @@ public class Aluno {
         return disciplinas;
     }
 
-    public double[] getNotas() {
+    public double[][] getNotas() {
         return notas;
     }
 }
