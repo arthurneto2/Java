@@ -13,14 +13,7 @@ public class Main {
 
         for (int i = 0; i < 3; i++) {
             System.out.println("\nContato " + (i + 1) + ":");
-            System.out.print("Nome: ");
-            String nome = scanner.nextLine();
-            System.out.print("Telefone: ");
-            String telefone = scanner.nextLine();
-            System.out.print("Email: ");
-            String email = scanner.nextLine();
-
-            contatos[i] = new Contato(nome, telefone, email);
+            contatos[i] = criaContato(scanner);
         }
 
         Agenda agenda = new Agenda(nomeAgenda, contatos);
@@ -29,5 +22,16 @@ public class Main {
         System.out.println(agenda.retornaTodosContatos());
 
         scanner.close();
+    }
+
+    public static Contato criaContato(Scanner scanner) {
+        System.out.print("Nome: ");
+        String nome = scanner.nextLine();
+        System.out.print("Telefone: ");
+        String telefone = scanner.nextLine();
+        System.out.print("Email: ");
+        String email = scanner.nextLine();
+
+        return new Contato(nome, telefone, email);
     }
 }
