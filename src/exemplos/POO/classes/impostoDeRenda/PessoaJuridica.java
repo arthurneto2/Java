@@ -8,6 +8,20 @@ public class PessoaJuridica extends Contribuinte {
         this.cnpj = cnpj;
     }
 
+    @Override
+    public double calcularImposto() {
+        return this.getRendaBruta() * ((double) 10 / 100);
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa Juridica: \n" +
+                "Nome: " + getNome() + "\n" +
+                "CNPJ: " + cnpj + "\n" +
+                "Renda Bruta: " + getRendaBruta() + "\n" +
+                "Imposto: " + calcularImposto() + "\n";
+    }
+
     public double getCnpj() {
         return cnpj;
     }
@@ -16,8 +30,4 @@ public class PessoaJuridica extends Contribuinte {
         this.cnpj = cnpj;
     }
 
-    @Override
-    public double calcularImposto() {
-        return this.getRendaBruta() * ((double) 10 / 100);
-    }
 }

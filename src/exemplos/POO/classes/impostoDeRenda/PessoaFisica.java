@@ -8,6 +8,7 @@ public class PessoaFisica extends Contribuinte{
         super.setRendaBruta(rendaBruta);
         this.cpf = cpf;
     }
+
     @Override
     public double calcularImposto() {
         if (getRendaBruta() <= 1400){
@@ -23,6 +24,15 @@ public class PessoaFisica extends Contribuinte{
             return getRendaBruta() * 0.25;
         }
         return getRendaBruta() * 0.30;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa Fisica: \n" +
+                "Nome: " + getNome() + "\n" +
+                "CPF: " + getCpf() + "\n" +
+                "Renda bruta: " + getRendaBruta() + "\n" +
+                "Imposto: " + calcularImposto() + "\n";
     }
 
     public double getCpf() {

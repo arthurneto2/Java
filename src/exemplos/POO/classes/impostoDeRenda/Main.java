@@ -14,14 +14,13 @@ public class Main {
 
         // Calculando e exibindo impostos para Pessoas Jurídicas
         System.out.println("=== PESSOAS JURÍDICAS ===");
-        System.out.println(pj1.getNome() + " - Renda: R$ " + pj1.getRendaBruta() + " - Imposto: R$ " + pj1.calcularImposto());
-        System.out.println(pj2.getNome() + " - Renda: R$ " + pj2.getRendaBruta() + " - Imposto: R$ " + pj2.calcularImposto());
-        System.out.println(pj3.getNome() + " - Renda: R$ " + pj3.getRendaBruta() + " - Imposto: R$ " + pj3.calcularImposto());
-
+        System.out.println(pj1.toString());
+        System.out.println(pj2.toString());
+        System.out.println(pj3.toString());
         // Calculando e exibindo impostos para Pessoas Físicas
-        System.out.println("\n=== PESSOAS FÍSICAS ===");
-        System.out.println(pf1.getNome() + " - Renda: R$ " + pf1.getRendaBruta() + " - Imposto: R$ " + pf1.calcularImposto());
-        System.out.println(pf2.getNome() + " - Renda: R$ " + pf2.getRendaBruta() + " - Imposto: R$ " + pf2.calcularImposto());
-        System.out.println(pf3.getNome() + " - Renda: R$ " + pf3.getRendaBruta() + " - Imposto: R$ " + pf3.calcularImposto());
+        System.out.println("=== PESSOAS FÍSICAS ===");
+        System.out.println(pf1.toString());
+        System.out.println(pf2.toString());
+        System.out.println(pf3.toString());
     }
 }
