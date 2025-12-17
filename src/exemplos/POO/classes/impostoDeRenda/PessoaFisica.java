@@ -8,23 +8,21 @@ public class PessoaFisica extends Contribuinte{
         super.setRendaBruta(rendaBruta);
         this.cpf = cpf;
     }
-
-
-
     @Override
     public double calcularImposto() {
         if (getRendaBruta() <= 1400){
-            setPorcentagemImposto(0);
-        } else if (getRendaBruta() <= 2100) {
-            setPorcentagemImposto(10);
-        } else if (getRendaBruta() <= 2800) {
-            setPorcentagemImposto(15);
-        } else if (getRendaBruta() <= 3600) {
-            setPorcentagemImposto(25);
-        } else {
-            setPorcentagemImposto(30);
+            return getRendaBruta() * 0;
         }
-        return getRendaBruta() * getPorcentagemImposto() / 100 ;
+        if (getRendaBruta() <= 2100) {
+            return getRendaBruta() * 0.10;
+        }
+        if (getRendaBruta() <= 2800) {
+            return getRendaBruta() * 0.15;
+        }
+        if (getRendaBruta() <= 3600) {
+            return getRendaBruta() * 0.25;
+        }
+        return getRendaBruta() * 0.30;
     }
 
     public double getCpf() {

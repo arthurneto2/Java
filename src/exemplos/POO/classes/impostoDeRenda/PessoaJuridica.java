@@ -3,8 +3,8 @@ package exemplos.POO.classes.impostoDeRenda;
 public class PessoaJuridica extends Contribuinte {
     private double cnpj;
 
-    public PessoaJuridica(String nome, double rendaBruta, double cnpj, double porcentagemImposto) {
-        super(nome, rendaBruta, porcentagemImposto);
+    public PessoaJuridica(String nome, double rendaBruta, double cnpj) {
+        super(nome, rendaBruta);
         this.cnpj = cnpj;
     }
 
@@ -18,6 +18,6 @@ public class PessoaJuridica extends Contribuinte {
 
     @Override
     public double calcularImposto() {
-        return this.getRendaBruta() * (this.getPorcentagemImposto()/100);
+        return this.getRendaBruta() * ((double) 10 / 100);
     }
 }

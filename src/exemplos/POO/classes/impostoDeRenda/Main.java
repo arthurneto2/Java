@@ -2,12 +2,10 @@ package exemplos.POO.classes.impostoDeRenda;
 
 public class Main {
     public static void main(String[] args) {
-        final int IMPOSTO_CNPJ = 10;
-
         // Criando 3 Pessoas Jurídicas
-        PessoaJuridica pj1 = new PessoaJuridica("Empresa ABC Ltda", 50000.0, 12345678000190L, IMPOSTO_CNPJ);
-        PessoaJuridica pj2 = new PessoaJuridica("Tech Solutions S.A.", 120000.0, 98765432000180L, IMPOSTO_CNPJ);
-        PessoaJuridica pj3 = new PessoaJuridica("Comércio XYZ ME", 35000.0, 11223344000155L, IMPOSTO_CNPJ);
+        PessoaJuridica pj1 = new PessoaJuridica("Empresa ABC Ltda", 50000.0, 12345678000190L);
+        PessoaJuridica pj2 = new PessoaJuridica("Tech Solutions S.A.", 120000.0, 98765432000180L);
+        PessoaJuridica pj3 = new PessoaJuridica("Comércio XYZ ME", 35000.0, 11223344000155L);
 
         // Criando 3 Pessoas Físicas
         PessoaFisica pf1 = new PessoaFisica("João Silva", 1200.0, 12345678901L);
