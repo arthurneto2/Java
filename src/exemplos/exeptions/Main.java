@@ -83,19 +83,14 @@ public class Main {
     }
 
     public static Contato criarContato() {
-        try{
-            Scanner scanner = new Scanner(System.in);
-            Contato contato = new Contato();
-            System.out.println("Digite o nome do contato:");
-            contato.setNome(scanner.nextLine());
-            System.out.println("Digite o telefone do contato:");
-            contato.setTelefone(scanner.nextLine());
-            contato.setId(IdContato.gerarId());
-            return contato;
-        }catch (InputMismatchException e) {
-            System.out.println("Entrada inválida. Por favor, tente novamente.");
-            return null;
-        }
+
+        Scanner scanner = new Scanner(System.in);
+        Contato contato = new Contato();
+        System.out.println("Digite o nome do contato:");
+        contato.setNome(scanner.nextLine());
+        System.out.println("Digite o telefone do contato:");
+        contato.setTelefone(scanner.nextLine());
+        return contato;
     }
 
     public static void editarContato(Agenda agenda) {
