@@ -32,7 +32,7 @@ public class MaiorValor {
                 }
             }
         }
-        System.out.println("Maior valor da matriz: " + maiorValor + " na posição (" + iMaior + ", " + jMaior + ")");
+        System.out.println("Maior valor da estruturasDeDados.matriz: " + maiorValor + " na posição (" + iMaior + ", " + jMaior + ")");
 
     }
 }
