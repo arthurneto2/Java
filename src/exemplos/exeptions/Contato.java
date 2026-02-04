@@ -1,17 +1,22 @@
 package exemplos.exeptions;
 
 public class Contato {
+    private static int contador = 0;
     private int id;
     private String nome;
     private String telefone;
 
-    public Contato(String nome, String telefone, int id) {
+    public Contato(String nome, String telefone) {
+        contador++;
         this.nome = nome;
         this.telefone = telefone;
-        this.id = id;
+        this.id = contador;
     }
 
-    public Contato() {}
+    public Contato() {
+        contador++;
+        this.id = contador;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
