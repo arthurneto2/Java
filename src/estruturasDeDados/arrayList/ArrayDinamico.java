@@ -1,23 +1,24 @@
 package estruturasDeDados.arrayList;
 
-public class ArrayDinamico {
-    private String[] array;
+public class ArrayDinamico<T>{
+    private T[] array;
     private int size;
     private static final int capacidade = 100;
 
+    @SuppressWarnings("unchecked")
     public ArrayDinamico() {
-        this.array = new String[capacidade];
+        this.array = (T[]) new Object[capacidade];
         this.size = 0;
     }
 
-    public void adicionar(String elemento) {
+    public void adicionar(T elemento) {
         if (size == array.length) {
             redimensionar();
         }
         array[size++] = elemento;
     }
 
-    public void adicionar(int posicao, String elemento) {
+    public void adicionar(int posicao, T elemento) {
         if (posicao < 0 || posicao > size) {
             throw new IndexOutOfBoundsException("Posição inválida: " + posicao);
         }
@@ -32,40 +33,44 @@ public class ArrayDinamico {
     }
 
     public void remover(int posicao) {
-        if (posicao < 0 || posicao > size) {
+        if (posicao < 0 || posicao >= size) {
             throw new IndexOutOfBoundsException("Posição inválida: " + posicao);
         }
-        for (int i = posicao; i < size; i++) {
+        for (int i = posicao; i < size - 1; i++) {
             array[i] = array[i + 1];
         }
+        array[size - 1] = null; // evita memory leak
         size--;
     }
 
-    public void remover(String elemento) {
+    public void remover(T elemento) {
         int posicao = busca(elemento);
         if (posicao != -1) {
             remover(posicao);
         }
     }
 
-    public int busca(String elemento) {
+    public int busca(T elemento) {
         for (int i = 0; i < size; i++) {
-            if (array[i].equals(elemento)) {
+            if (array[i] == null) {
+                if (elemento == null) return i;
+            } else if (array[i].equals(elemento)) {
                 return i;
             }
         }
         return -1;
     }
 
-    public String busca(int posicao) {
+    public T busca(int posicao) {
         if (posicao < 0 || posicao >= size) {
             throw new IndexOutOfBoundsException("Posição inválida: " + posicao);
         }
         return array[posicao];
     }
 
+    @SuppressWarnings("unchecked")
     private void redimensionar() {
-        String[] elementosNovos = new String[array.length * 2];
+        T[] elementosNovos = (T[]) new Object[array.length * 2];
         System.arraycopy(array, 0, elementosNovos, 0, array.length);
         array = elementosNovos;
     }
@@ -74,11 +79,9 @@ public class ArrayDinamico {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        for (int i = 0; i < size - 1; i++) {
-            sb.append(array[i]).append(", ");
-        }
-        if (size > 0) {
-            sb.append(array[size - 1]);
+        for (int i = 0; i < size; i++) {
+            sb.append(array[i]);
+            if (i < size - 1) sb.append(", ");
         }
         sb.append("]");
         return sb.toString();
