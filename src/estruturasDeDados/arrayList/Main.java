@@ -8,7 +8,15 @@ public class Main {
             lista.adicionar(("Elemento " + i));
         }
 
-        System.out.println(lista.toString());
+        System.out.println(lista);
+        System.out.println(lista.busca(5));
+        System.out.println(lista.busca("Elemento 7"));
+
+        lista.adicionar(2, "Novo Elemento");
+        System.out.println(lista);
+
+        lista.remover("Novo Elemento");
+        System.out.println(lista);
 
     }
 }
