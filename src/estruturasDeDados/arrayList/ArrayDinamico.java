@@ -3,12 +3,15 @@ package estruturasDeDados.arrayList;
 public class ArrayDinamico<T>{
     private T[] array;
     private int size;
-    private static final int capacidade = 100;
 
     @SuppressWarnings("unchecked")
-    public ArrayDinamico() {
+    public ArrayDinamico(int capacidade) {
         this.array = (T[]) new Object[capacidade];
         this.size = 0;
+    }
+
+    public ArrayDinamico() {
+        this(10);
     }
 
     public void adicionar(T elemento) {
@@ -85,6 +88,28 @@ public class ArrayDinamico<T>{
         }
         sb.append("]");
         return sb.toString();
+    }
+
+    public boolean contem(T elemento) {
+        return busca(elemento) != -1;
+    }
+
+    public int ultimoIndice(T elemento) {
+        for (int i = size - 1; i >= 0; i--) {
+            if (array[i] == null) {
+                if (elemento == null) return i;
+            } else if (array[i].equals(elemento)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void limpar() {
+        for (int i = 0; i < size; i++) {
+            array[i] = null;
+        }
+        size = 0;
     }
 
     public int size() {
