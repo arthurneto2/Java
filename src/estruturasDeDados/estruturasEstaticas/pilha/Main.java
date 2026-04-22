@@ -1,6 +1,6 @@
-package estruturasDeDados.pilha;
+package estruturasDeDados.estruturasEstaticas.pilha;
 
-public class Mai {
+public class Main {
     public static void main(String[] args) {
         Stack<Integer> pilha = new Stack<>();
 

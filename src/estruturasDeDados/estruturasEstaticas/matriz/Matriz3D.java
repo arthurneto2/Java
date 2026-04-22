@@ -1,4 +1,4 @@
-package estruturasDeDados.matriz;
+package estruturasDeDados.estruturasEstaticas.matriz;
 
 public class Matriz3D {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package estruturasDeDados.arrays;
+package estruturasDeDados.estruturasEstaticas.arrays;
 
 public class Arrays {
     public static void main(String[] args) {
