@@ -5,7 +5,7 @@ public class Main {
         ArrayList<String> lista = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            lista.adicionar(("Elemento " + i));
+            lista.add(("Elemento " + i));
         }
 
         System.out.println(lista);
@@ -17,6 +17,9 @@ public class Main {
 
         lista.remover("Novo Elemento");
         System.out.println(lista);
+
+        System.out.println(lista.size());
+
 
     }
 }

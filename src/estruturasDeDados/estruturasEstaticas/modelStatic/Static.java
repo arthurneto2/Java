@@ -3,25 +3,36 @@ package estruturasDeDados.estruturasEstaticas.modelStatic;
 public abstract class Static<T> {
     private T[] array;
     private int size;
+    private int indexLastElement;
 
     @SuppressWarnings("unchecked")
     public Static(int capacidade) {
         this.array = (T[]) new Object[capacidade];
         this.size = 0;
+        this.indexLastElement = -1;
     }
 
     @SuppressWarnings("unchecked")
-    protected void redimensionar() {
+    protected void resize() {
         T[] elementosNovos = (T[]) new Object[array.length * 2];
         System.arraycopy(array, 0, elementosNovos, 0, array.length);
         array = elementosNovos;
     }
 
-    protected void adicionar(T elemento) {
+    protected void add(T elemento) {
         if (size == array.length) {
-            redimensionar();
+            resize();
         }
         array[size++] = elemento;
+        updateIndexLastElement();
+    }
+
+    protected void updateIndexLastElement() {
+        this.indexLastElement = size - 1;
+    }
+
+    protected int getIndexLastElement() {
+        return indexLastElement;
     }
 
     protected void upSize() {
@@ -40,7 +51,7 @@ public abstract class Static<T> {
         return array;
     }
 
-    public void limpar() {
+    public void clean() {
         for (int i = 0; i < size(); i++) {
             array[i] = null;
         }

@@ -9,8 +9,8 @@ public class ArrayList<T> extends Static<T> {
         super(10);
     }
 
-    public void adicionar(T elemento) {
-        super.adicionar(elemento);
+    public void add(T elemento) {
+        super.add(elemento);
     }
 
     public void adicionar(int posicao, T elemento) {
@@ -18,13 +18,14 @@ public class ArrayList<T> extends Static<T> {
             throw new IndexOutOfBoundsException("Posição inválida: " + posicao);
         }
         if (super.size() == super.getArray().length) {
-            super.redimensionar();
+            super.resize();
         }
         for (int i = super.size(); i > posicao; i--) {
             super.getArray()[i] = super.getArray()[i - 1];
         }
         super.getArray()[posicao] = elemento;
         super.upSize();
+        updateIndexLastElement();
     }
 
     public void remover(int posicao) {
@@ -36,6 +37,7 @@ public class ArrayList<T> extends Static<T> {
         }
         super.getArray()[super.size() - 1] = null; // evita memory leak
         downSize();
+        updateIndexLastElement();
     }
 
     public void remover(T elemento) {

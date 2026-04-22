@@ -3,22 +3,18 @@ package estruturasDeDados.estruturasEstaticas.pilha;
 import estruturasDeDados.estruturasEstaticas.modelStatic.Static;
 
 public class Stack<T> extends Static<T> {
-    private int topo;
 
     public Stack(int capacidade) {
         super(capacidade);
-        this.topo = -1;
     }
 
     public Stack() {
         super(10);
-        this.topo = -1;
     }
 
 
     public void push(T elemento) {
-        super.adicionar(elemento);
-        topo++;
+        super.add(elemento);
     }
 
 
@@ -26,9 +22,10 @@ public class Stack<T> extends Static<T> {
         if (isEmpty()) {
             throw new RuntimeException("Stack vazia");
         }
-        T elemento = getArray()[topo];
-        getArray()[topo--] = null; // evita memory leak
+        T elemento = getArray()[getIndexLastElement()];
+        getArray()[getIndexLastElement()] = null; // evita memory leak
         downSize();
+        updateIndexLastElement();
         return elemento;
     }
 
@@ -36,6 +33,6 @@ public class Stack<T> extends Static<T> {
         if (isEmpty()) {
             throw new RuntimeException("Stack vazia");
         }
-        return getArray()[topo];
+        return getArray()[getIndexLastElement()];
     }
 }
