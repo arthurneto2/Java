@@ -6,7 +6,7 @@ public abstract class Static<T> {
     private int indexLastElement;
 
     @SuppressWarnings("unchecked")
-    public Static(int capacidade) {
+    protected Static(int capacidade) {
         this.array = (T[]) new Object[capacidade];
         this.size = 0;
         this.indexLastElement = -1;
