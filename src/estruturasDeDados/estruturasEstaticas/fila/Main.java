@@ -1,9 +1,10 @@
 package estruturasDeDados.estruturasEstaticas.fila;
 
+import estruturasDeDados.estruturasEstaticas.interfaces.QueueInterface;
+
 public class Main {
     public static void main(String[] args) {
-        Queue<Integer> fila = new Queue<>(5);
-
+        QueueInterface<Integer> fila = new Queue<>(5);
         fila.enqueue(1);
         fila.enqueue(2);
         fila.enqueue(3);

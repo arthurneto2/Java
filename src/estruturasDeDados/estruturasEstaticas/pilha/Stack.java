@@ -1,8 +1,9 @@
 package estruturasDeDados.estruturasEstaticas.pilha;
 
-import estruturasDeDados.estruturasEstaticas.modelStatic.Static;
+import estruturasDeDados.estruturasEstaticas.arrayList.ArrayList;
+import estruturasDeDados.estruturasEstaticas.interfaces.StackInterface;
 
-public class Stack<T> extends Static<T> {
+public class Stack<T> extends ArrayList<T> implements StackInterface<T> {
 
     public Stack(int capacidade) {
         super(capacidade);
@@ -14,7 +15,7 @@ public class Stack<T> extends Static<T> {
 
 
     public void push(T elemento) {
-        super.add(elemento);
+        add(elemento);
     }
 
 
@@ -22,7 +23,7 @@ public class Stack<T> extends Static<T> {
         if (isEmpty()) {
             throw new RuntimeException("Stack vazia");
         }
-        T elemento = getArray()[getIndexLastElement()];
+        T elemento = (T) getArray()[getIndexLastElement()];
         getArray()[getIndexLastElement()] = null; // evita memory leak
         downSize();
         updateIndexLastElement();
@@ -33,6 +34,6 @@ public class Stack<T> extends Static<T> {
         if (isEmpty()) {
             throw new RuntimeException("Stack vazia");
         }
-        return getArray()[getIndexLastElement()];
+        return (T) getArray()[getIndexLastElement()];
     }
 }

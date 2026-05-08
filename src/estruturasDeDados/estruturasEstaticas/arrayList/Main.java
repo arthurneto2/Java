@@ -9,13 +9,13 @@ public class Main {
         }
 
         System.out.println(lista);
-        System.out.println(lista.busca(5));
-        System.out.println(lista.busca("Elemento 7"));
+        System.out.println(lista.get(5));
+        System.out.println(lista.indexOf("Elemento 7"));
 
-        lista.adicionar(2, "Novo Elemento");
+        lista.add(2, "Novo Elemento");
         System.out.println(lista);
 
-        lista.remover("Novo Elemento");
+        lista.remove("Novo Elemento");
         System.out.println(lista);
 
         System.out.println(lista.size());

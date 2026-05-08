@@ -1,8 +1,10 @@
+
 package estruturasDeDados.estruturasEstaticas.fila;
 
-import estruturasDeDados.estruturasEstaticas.modelStatic.Static;
+import estruturasDeDados.estruturasEstaticas.arrayList.ArrayList;
+import estruturasDeDados.estruturasEstaticas.interfaces.QueueInterface;
 
-public class Queue<T> extends Static<T> {
+public class Queue<T> extends ArrayList<T> implements QueueInterface<T> {
 
     public Queue(int capacidade) {
         super(capacidade);
@@ -11,11 +13,11 @@ public class Queue<T> extends Static<T> {
     public Queue() {super(10);}
 
     public void enqueue(T elemento) {
-        super.add(elemento);
+        add(elemento);
     }
 
     public T dequeue() {
-        T objeto = getArray()[0];
+        T objeto = (T) getArray()[0];
         for (int i = 0; i < size() - 1; i++) {
             getArray()[i] = getArray()[i + 1];
         }
@@ -26,7 +28,7 @@ public class Queue<T> extends Static<T> {
     }
 
     public T peek() {
-        return getArray()[0];
+        return (T) getArray()[0];
     }
 
 }
