@@ -1,4 +1,4 @@
-package estruturasDeDados.estruturasEstaticas.interfaces;
+package estruturasDeDados.interfaces;
 
 public interface StackInterface<T> {
     void push(T elemento);

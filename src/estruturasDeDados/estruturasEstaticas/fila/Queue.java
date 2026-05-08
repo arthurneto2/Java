@@ -2,7 +2,7 @@
 package estruturasDeDados.estruturasEstaticas.fila;
 
 import estruturasDeDados.estruturasEstaticas.arrayList.ArrayList;
-import estruturasDeDados.estruturasEstaticas.interfaces.QueueInterface;
+import estruturasDeDados.interfaces.QueueInterface;
 
 public class Queue<T> extends ArrayList<T> implements QueueInterface<T> {
 

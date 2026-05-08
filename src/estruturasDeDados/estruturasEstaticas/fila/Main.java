@@ -1,6 +1,6 @@
 package estruturasDeDados.estruturasEstaticas.fila;
 
-import estruturasDeDados.estruturasEstaticas.interfaces.QueueInterface;
+import estruturasDeDados.interfaces.QueueInterface;
 
 public class Main {
     public static void main(String[] args) {

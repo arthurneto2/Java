@@ -1,7 +1,7 @@
 
 package estruturasDeDados.estruturasEstaticas.fila;
 
-import estruturasDeDados.estruturasEstaticas.interfaces.QueueInterface;
+import estruturasDeDados.interfaces.QueueInterface;
 
 public class PriorityQueue<T extends Comparable<T>> extends Queue<T> implements QueueInterface<T> {
 

@@ -1,6 +1,6 @@
 package estruturasDeDados.estruturasEstaticas.arrayList;
 
-import estruturasDeDados.estruturasEstaticas.interfaces.ListInterface;
+import estruturasDeDados.interfaces.ListInterface;
 
 public class ArrayList<T> implements ListInterface<T> {
 

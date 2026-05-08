@@ -1,7 +1,7 @@
 package estruturasDeDados.estruturasEstaticas.pilha;
 
 import estruturasDeDados.estruturasEstaticas.arrayList.ArrayList;
-import estruturasDeDados.estruturasEstaticas.interfaces.StackInterface;
+import estruturasDeDados.interfaces.StackInterface;
 
 public class Stack<T> extends ArrayList<T> implements StackInterface<T> {
 

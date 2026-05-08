@@ -1,4 +1,4 @@
-package estruturasDeDados.estruturasEstaticas.interfaces;
+package estruturasDeDados.interfaces;
 
 public interface QueueInterface<T> {
     void enqueue(T elemento);

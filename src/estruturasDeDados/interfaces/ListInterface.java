@@ -1,4 +1,4 @@
-package estruturasDeDados.estruturasEstaticas.interfaces;
+package estruturasDeDados.interfaces;
 
 public interface ListInterface<T> {
     void add(T elemento);
