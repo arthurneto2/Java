@@ -34,7 +34,6 @@ public class ArrayList<T> implements ListInterface<T> {
         updateIndexLastElement();
     }
 
-    // Java-style overload to keep compatibility: add at index
     public void add(int posicao, T elemento) {
         if (posicao < 0 || posicao > this.size()) {
             throw new IndexOutOfBoundsException("Posição inválida: " + posicao);
